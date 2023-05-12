@@ -2,7 +2,7 @@ import selectors
 import streamlit as st
 import math
 
-paginas = ["Menu principal", "Equação do segundo grau", "Converção de têmperaturas"]
+paginas = ["Menu principal", "Equação do segundo grau", "Conversão de temperaturas"]
 
 sidebar = st.sidebar.selectbox("Escolha uma função", paginas)
 
@@ -114,11 +114,11 @@ elif sidebar == "Equação do segundo grau":
                 st.markdown(f'''## X1 = {int(x1)}/{int(l1)} \n ## X2 = {int(x2)}/{int(l2)} ''')
                 st.markdown(f'''## Delta é igual a: {delta}''')
 
-elif sidebar == "Converção de têmperaturas":
+elif sidebar == "Conversão de temperaturas":
 
     #TITULOS
 
-    st.markdown('''# Converção de têmperaturas''')
+    st.markdown('''# Conversão de temperaturas''')
     st.markdown('''## Adicione apenas uma temperatura''')
 
     #ICOGNITAS
