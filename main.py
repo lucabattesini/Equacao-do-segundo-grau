@@ -4,14 +4,12 @@ import math
 
 paginas = ["Menu principal", "Equação do segundo grau", "Conversão de temperaturas"]
 
-sidebar = st.sidebar.selectbox("Escolha uma função", paginas)
-
-if sidebar == "Menu principal":
+if st.sidebar.button("Menu"):
     st.markdown('''# Calculadora de funções ''')
     st.markdown('''## Bem vindo ao Stayline''')
     st.markdown('''Selecione uma função no menu a esquerda''')
 
-elif sidebar == "Equação do segundo grau":
+if st.sidebar.button("Equação do segundo grau"):
     st.title('Resolução equação do segundo grau')
 
     st.markdown('''## escreva os termos em seus respectivos espaços: aX² + bX + c = 0''')
@@ -45,7 +43,8 @@ elif sidebar == "Equação do segundo grau":
         #EQUAÇÃO COMPLETA E IMCOMPLETA
 
         #DELTA
-    delta = int(b**2 -4*a*c)
+
+    delta = b ** 2 -4 * a * c
 
 
     if a == 0:
@@ -109,12 +108,12 @@ elif sidebar == "Equação do segundo grau":
                 st.markdown(f'''## X1 = {int(x1)}/{int(l1)} \n ## X2 = {int(x2r)} ''')
                 st.markdown(f'''## Delta é igual a: {delta}''')
         
-        elif x1r == float(x1r) and x2r == float:
+        elif x1r == float(x1r) and x2r == float(x2r):
             if st.button('Resposta'):
                 st.markdown(f'''## X1 = {int(x1)}/{int(l1)} \n ## X2 = {int(x2)}/{int(l2)} ''')
                 st.markdown(f'''## Delta é igual a: {delta}''')
 
-elif sidebar == "Conversão de temperaturas":
+if st.sidebar.button("Conversão de temperaturas"):
 
     #TITULOS
 
@@ -123,13 +122,14 @@ elif sidebar == "Conversão de temperaturas":
 
     #ICOGNITAS
 
-
-
+    
+    
+    
     
     c = st.number_input("Celsius", value= 0.0)
     
     
-    f = st.number_input("Farenheite", value= 32.0)
+    f = st.number_input("Fahrenheit", value= 32.0)
     
     
     k = st.number_input("Kelvin", value= 273.15)
@@ -147,14 +147,14 @@ elif sidebar == "Conversão de temperaturas":
 
             
 
-        #CELSIUS PARA FARENHEITE
+        #CELSIUS PARA FAHRENHEIT
         frc = float(c * 9 + 160)
         cf = float(frc / 5 )
 
 
         if st.button('Resposta'):
-            st.markdown(f'''## Kelvin: {ck}''')
-            st.markdown(f'''## Frenheite: {cf}''')
+            st.markdown(f'''## Kelvin: {round(ck,3)}''')
+            st.markdown(f'''## Fahrenheit: {round(cf,3)}''')
 
     elif k != 273.0:
 
@@ -165,26 +165,26 @@ elif sidebar == "Conversão de temperaturas":
 
         kc = float(k - 273.15)
 
-        #KELVIN PARA FARENHEITE
+        #KELVIN PARA FAHRENHEIT
 
         frc = float(k * 9 + 160 - 2458.35)
         kf = float(frc / 5)
 
 
         if st.button('Resposta'):
-            st.markdown(F'''## Celsius: {kc}''')
-            st.markdown(F'''## Farenheite: {kf}''')
+            st.markdown(F'''## Celsius: {round(kc,3)}''')
+            st.markdown(F'''## Fahrenheit: {round(kf,3)}''')
 
     elif f != 32.0:
-        #FARENHEITE PARA
+        #FAHRENHEIT PARA
 
-        #FARENHEITE PARA CELSIUS
+        #FAHRENHEIT PARA CELSIUS
 
         frc = float(f * 5 -160)
         fc = float(frc / 9)
         
 
-        #FARENHEITE PARA KELVIN
+        #FAHRENHEIT PARA KELVIN
 
         frc = float(f * 5 + 2298.35)
         fk = float(frc / 9)
@@ -192,8 +192,8 @@ elif sidebar == "Conversão de temperaturas":
 
 
         if st.button('Resposta'):
-            st.markdown(F'''## Celsius: {fc}''')
-            st.markdown(F'''## Kelvin: {fk}''')
+            st.markdown(F'''## Celsius: {round(fc,3)}''')
+            st.markdown(F'''## Kelvin: {round(fk,3)}''')
 
 
 
