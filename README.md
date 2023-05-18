@@ -1,12 +1,32 @@
-# Calculadora de funções
+# Functions calculator
 
-## Descrição
-    Programa que resolve funções e calculos pre formulados como equações do segundo tgrau e calculos de termologia.
+## Description
+The program solve mathematic calculations and formulas like second grey equation and termology calculations
 
-## Execução do código
-    O programa é inteiramente feito em python e é utilizado pelo streamlit então quando for executalo primeiro é preciso que O venv seja iniciado. Para iniciar a venv apenas execute este código no terminal
-        Noma_da_venv/Scripts/Activate
-    E depois execute o código pelo streamlit utilizando este código no terminal
-        streamlit run Nome_do_arquivo_que_deseja_executar 
-    
-    pip install -r requirements.txt
+## technologys used
+-Python
+
+-Streamlit
+
+## Installing 
+To run this code you need to have streamlit installed in your virtualenv. To do it run this code in your terminal --
+
+    pip install streamlit
+
+To see if streamlit is install run --
+
+    streamlit hello
+
+## Running the code
+Let's run it
+
+Still in terminal start your virtualenv running this code --
+
+    virtualenv_name/Scripts/Activate
+
+And finally run the program with this code --
+
+    streamlit run program_name
+
+## Author
+Luca Battesini - Developer
