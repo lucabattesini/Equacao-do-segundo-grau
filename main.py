@@ -66,12 +66,15 @@ elif sidebar == "Equação do segundo grau":
         s = x / l
         if s == int(s):
             if st.button('Resposta'):
-                st.markdown(f'''## X é igual a: {s}''')
+                answer =  fr"\Large x = {int(s)}"
+                st.latex(answer)
                 st.markdown(f'''## Delta é igual a: {delta}''')
 
         else:
+
             if st.button('Resposta'):
-                st.markdown(f'''## X é igual a: {x} / {l}''')
+                answer = fr"\Large \frac{{{x}}}{l}"
+                st.latex(answer)
                 st.markdown(f'''## Delta é igual a: {delta}''')
 
         # DELTA MAIOR QUE 0
@@ -89,25 +92,26 @@ elif sidebar == "Equação do segundo grau":
 
         if x1r == int(x1r) and x2r == int(x2r):
             if st.button('Resposta'):
-                st.markdown(f'''## X1 = {int(x1r)} \n ## X2 = {int(x2r)}''')
+                answer = fr"\Large x' = {int(x1r)} \newline x'' = {int(x2r)}"
+                st.latex(answer)
                 st.markdown(f'''## Delta é igual a: {delta}''')
 
         elif x1r == int(x1r) and x2r == float(x2r):
             if st.button('Resposta'):
-                st.markdown(
-                    f'''## X1 = {int(x1r)} \n ## X2 = {int(x2)}/{int(l2)} ''')
+                answer = fr"\Large x' = {int(x1r)} \newline x'' = \frac{{{x2}}}{l2}"
+                st.latex(answer)
                 st.markdown(f'''## Delta é igual a: {delta}''')
 
         elif x1r == float(x1r) and x2r == int(x2r):
             if st.button('Resposta'):
-                st.markdown(
-                    f'''## X1 = {int(x1)}/{int(l1)} \n ## X2 = {int(x2r)} ''')
+                answer = fr"\Large x' = \frac{{{x1}}}{l1} \newline x'' = {int(x2r)}"
+                st.latex(answer)
                 st.markdown(f'''## Delta é igual a: {delta}''')
 
         elif x1r == float(x1r) and x2r == float(x2r):
             if st.button('Resposta'):
-                st.markdown(
-                    f'''## X1 = {int(x1)}/{int(l1)} \n ## X2 = {int(x2)}/{int(l2)} ''')
+                answer = fr"\Large x' = \frac{{{x1}}}{l1} \newline x'' = \frac{{{x2}}}{l2}"
+                st.latex(answer)
                 st.markdown(f'''## Delta é igual a: {delta}''')
 
 elif sidebar == "Conversão de temperaturas":
