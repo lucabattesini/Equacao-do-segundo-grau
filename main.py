@@ -9,6 +9,7 @@ paginas = ["Menu principal", "Equação do segundo grau",
 
 sidebar = st.sidebar.selectbox("Selecione uma função", paginas)
 
+
 if sidebar == "Menu principal":
     st.markdown('''# Calculadora de funções ''')
     st.markdown('''## Bem vindo ao Stayline''')

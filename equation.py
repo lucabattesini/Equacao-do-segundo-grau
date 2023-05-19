@@ -27,6 +27,7 @@ def equacao():
     b2 = b
     c2 = c
 
+
     # CODIGO
 
     # EQUAÇÃO COMPLETA E IMCOMPLETA
@@ -59,14 +60,16 @@ def equacao():
                 if st.button('Resposta'):
                     answer =  fr"\Large x = {int(s)}"
                     st.latex(answer)
-                    st.markdown(f'''## Delta é igual a: {delta}''')
+                    answerd = fr'\Large Δ = {delta}'
+                    st.latex(answerd)
 
             else:
 
                 if st.button('Resposta'):
                     answer = fr"\Large \frac{{{x}}}{l}"
                     st.latex(answer)
-                    st.markdown(f'''## Delta é igual a: {delta}''')
+                    answerd = fr'\Large Δ = {delta}'
+                    st.latex(answerd)
 
             # DELTA MAIOR QUE 0
         elif delta > 0:
@@ -85,26 +88,31 @@ def equacao():
                 if st.button('Resposta'):
                     answer = fr"\Large x' = {int(x1r)} \newline x'' = {int(x2r)}"
                     st.latex(answer)
-                    st.markdown(f'''## Delta é igual a: {delta}''')
+                    answerd = fr'\Large Δ = {delta}'
+                    st.latex(answerd)
 
             elif x1r == int(x1r) and x2r == float(x2r):
                 if st.button('Resposta'):
                     answer = fr"\Large x' = {int(x1r)} \newline x'' = \frac{{{x2}}}{l2}"
                     st.latex(answer)
-                    st.markdown(f'''## Delta é igual a: {delta}''')
+                    answerd = fr'\Large Δ = {delta}'
+                    st.latex(answerd)
 
             elif x1r == float(x1r) and x2r == int(x2r):
                 if st.button('Resposta'):
                     answer = fr"\Large x' = \frac{{{x1}}}{l1} \newline x'' = {int(x2r)}"
                     st.latex(answer)
-                    st.markdown(f'''## Delta é igual a: {delta}''')
+                    answerd = fr'\Large Δ = {delta}'
+                    st.latex(answerd)
 
             elif x1r == float(x1r) and x2r == float(x2r):
                 if st.button('Resposta'):
                     answer = fr"\Large x' = \frac{{{x1}}}{l1} \newline x'' = \frac{{{x2}}}{l2}"
                     st.latex(answer)
-                    st.markdown(f'''## Delta é igual a: {delta}''')
+                    answerd = fr'\Large Δ = {delta}'
+                    st.latex(answerd)
     else:
         if st.button('Resposta'):
                 st.markdown('''## Delta não tem uma raiz Exata''')
-                st.markdown(f'''## Delta é igual a {delta}''')
+                answerd = fr'\Large Δ = {delta}'
+                st.latex(answerd)
