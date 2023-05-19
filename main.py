@@ -21,16 +21,4 @@ elif sidebar == "Equação do segundo grau":
 elif sidebar == "Conversão de temperaturas":
     termologia()
     
-# DEMONSTRAÇÃO DO CÓDIGO
 
-st.divider()
-
-codigo = st.expander("Mostrar código")
-
-with codigo:
-    with open('main.py', 'r') as main:
-        codigo = main.read()
-
-    st.code(codigo, language='python')
-
-st.markdown('''**Desenvolvido por Luca Battesini**''')

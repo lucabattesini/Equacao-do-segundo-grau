@@ -62,3 +62,17 @@ def termologia():
         if st.button('Resposta'):
             st.markdown(F'''## Celsius: {round(fc,3)}''')
             st.markdown(F'''## Kelvin: {round(fk,3)}''')
+    
+    #VISUALIZAÇÃO DO CODIGO
+
+    st.divider()
+
+    codigo = st.expander("Mostrar código")
+
+    with codigo:
+        with open('termology.py', 'r') as main:
+            codigo = main.read()
+
+        st.code(codigo, language='python')
+
+    st.markdown('''**Desenvolvido por Luca Battesini**''')

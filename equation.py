@@ -116,3 +116,16 @@ def equacao():
                 st.markdown('''## Delta não tem uma raiz Exata''')
                 answerd = fr'\Large Δ = {delta}'
                 st.latex(answerd)
+    # DEMONSTRAÇÃO DO CÓDIGO
+
+    st.divider()
+
+    codigo = st.expander("Mostrar código")
+
+    with codigo:
+        with open('equation.py', 'r') as main:
+            codigo = main.read()
+
+        st.code(codigo, language='python')
+
+    st.markdown('''**Desenvolvido por Luca Battesini**''')
