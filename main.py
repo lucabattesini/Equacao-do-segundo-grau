@@ -187,6 +187,7 @@ elif sidebar == "Conversão de temperaturas":
 
 # DEMONSTRAÇÃO DO CÓDIGO
 
+st.divider()
 
 codigo = st.expander("Mostrar código")
 
