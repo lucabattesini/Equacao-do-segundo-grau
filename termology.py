@@ -60,8 +60,8 @@ def termologia():
         fk = float(frc / 9)
 
         if st.button('Resposta'):
-            st.markdown(F'''## Celsius: {round(fc,3)}''')
-            st.markdown(F'''## Kelvin: {round(fk,3)}''')
+            st.markdown(f'''## Celsius: {round(fc,3)}''')
+            st.markdown(f'''## Kelvin: {round(fk,3)}''')
     
     #VISUALIZAÇÃO DO CODIGO
 
