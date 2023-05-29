@@ -5,7 +5,4 @@ from termology import termologia
 def menu():
     st.markdown("# Bem vindo ao Stayline")
     st.markdown("## Calculadora de funções")
-    if st.button("Equações do segundo grau"):
-        equacao()
-    if st.button("termologia"):
-        termologia()
+
