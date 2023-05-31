@@ -2,18 +2,38 @@ import streamlit as st
 
 def porcentagem():
     st.markdown("# Calculos com porcentagem")
+    st.markdown("Deixe como 0 os números indefinidos")
 
-    if st.button("Porcentagem de um valor"):
-        number1 = st.number_input("Valor")
-        number2 = st.number_input("Igual a x% de")
+    coluna1, coluna2 = st.columns(2)
+
+    with coluna1:
+        total = st.number_input("Número total")
+        subtotal = st.number_input("Parte do número total")
+    with coluna2:
+        porcento = st.number_input("Porcentagem", value=100)
+        number = st.number_input("Porcentagem do número total")
+
+    if number == 0:
+        subtotal2 = subtotal * porcento
+        s = subtotal2 / total
+        if st.button("resposta"):
+            st.markdown(f"## {subtotal} é igual a {s}% de {total}")
     
-    if st.button("valor de uma porcentagem"):
-        porcento = st.number_input("Porcentagem")
-        number = st.number_input("De")
+    elif subtotal == 0:
+        total2 = total * number
+        s = total2 / porcento
+        if st.button("resposta"):
+            st.markdown(f"## {number}% de {total} é igual a {s}")
+    
+    elif total == 0:
+        subtotal2 = subtotal * porcento
+        s = subtotal2 / number
+        if st.button("resposta"):
+            st.markdown(f"{subtotal} é igual a {number}% de {total}")
+    
 
     
-    
-    #DMONSTRAÇÃO DO CÓDIGO
+    #DEMONSTRAÇÃO DO CÓDIGO
 
     st.divider()
 
