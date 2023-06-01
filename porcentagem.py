@@ -12,7 +12,7 @@ def porcentagem():
     with coluna2:
         porcento = st.number_input("Porcentagem", value=100)
         number = st.number_input("Porcentagem do número total")
-
+    
     if number == 0:
         subtotal2 = subtotal * porcento
         s = subtotal2 / total
