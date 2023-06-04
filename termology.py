@@ -10,7 +10,7 @@ def termologia():
 
     c = st.number_input("Celsius", value=0.0)
 
-    f = st.number_input("Fahrenheit", value=32.00)
+    f = st.number_input("Fahrenheit", value=32.0)
 
     k = st.number_input("Kelvin", value=273.15)
 
@@ -46,7 +46,7 @@ def termologia():
             st.markdown(F'''## Celsius: {round(kc,3)}''')
             st.markdown(F'''## Fahrenheit: {round(kf,3)}''')
 
-    elif f != 32.00:
+    elif f != 32.0:
         # FAHRENHEIT PARA
 
         # FAHRENHEIT PARA CELSIUS
