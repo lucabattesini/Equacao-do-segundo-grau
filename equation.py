@@ -1,4 +1,5 @@
 import streamlit as st
+import math
 
 def equacao():
     st.title('Resolução equação do segundo grau')
@@ -10,7 +11,7 @@ def equacao():
 
     wrong_number = 0
 
-    a = st.number_input("Termo A", value=1, step=1)
+    a = int(st.number_input("Termo A", value=1, step=1))
 
     while True:
         if a == wrong_number:
@@ -20,8 +21,8 @@ def equacao():
         else:
             break
 
-    b = st.number_input("termo B", value=0, step=1)
-    c = st.number_input("termo C", value=0, step=1)
+    b = int(st.number_input("termo B", value=0, step=1))
+    c = int(st.number_input("termo C", value=0, step=1))
 
     a2 = a
     b2 = b
@@ -35,24 +36,21 @@ def equacao():
     # DELTA
 
     delta = int(b ** 2 - 4 * a * c)
-    deltaraiz = delta ** (1/2)
+    deltaraiz = delta ** 0.5
+    
+    if delta < 0:
+        if st.button('Resposta'):
+                st.markdown('''## X não pertence a R''')
+                st.markdown(f'''## Delta é igual a: {delta}''')
 
-
-    if deltaraiz == int(deltaraiz):
+    elif deltaraiz == int(deltaraiz):
         if a == 0:
             if st.button('Resposta'):
                 st.markdown(
                     '''## É preciso que pelo menos o termo "A" seja preenchido para obter uma resposta''')
 
-            # DELTA MENOR QUE 0
-        elif delta < 0:
-
-            if st.button('Resposta'):
-                st.markdown('''## X não pertence a R''')
-                st.markdown(f'''## Delta é igual a: {delta}''')
-
             # DELTA = 0
-        elif delta == 0:
+        if delta == 0:
             x = int(-(b2) + delta**(1/2))
             l = int(2 * a2)
             s = x / l
