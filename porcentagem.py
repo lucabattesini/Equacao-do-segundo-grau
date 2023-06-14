@@ -1,39 +1,41 @@
 import streamlit as st
+import math 
+import random
 
 def porcentagem():
     st.markdown("# Calculos com porcentagem")
-    st.markdown("Deixe como 0 os números indefinidos")
+    st.markdown("## Selecione sua função")
 
-    coluna1, coluna2 = st.columns(2)
+    xy = st.expander("X são quantos % de Y?")
+    xy2 = st.expander("Quanto é X % de Y")
+    xy3 = st.expander("X é igual a  Y % de")
+ 
 
-    with coluna1:
-        total = st.number_input("Número total", value=0)
-        subtotal = st.number_input("Parte do número total", value=0)
-    with coluna2:
-        porcento = st.number_input("Porcentagem", value=100)
-        subporcento = st.number_input("Porcentagem do número total", value=0)
-
-    if subporcento == 0:
-        if total == 0:
-            st.warning(f"## Não é possivel dividir números por 0")
-        else:
-            subtotal2 = subtotal * porcento
-            s = subtotal2 / total
-            if st.button("resposta"):
-                st.markdown(f"## {subtotal} é igual a {s}% de {total}")
-    
-    elif subtotal == 0:
-        total2 = total * subporcento
-        s = total2 / porcento
-        if st.button("resposta"):
-            st.markdown(f"## {subporcento}% de {total} é igual a {s}")
-    
-    elif total == 0:
-        subtotal2 = subtotal * porcento
-        s = subtotal2 / subporcento
-        if st.button("resposta"):
-            st.markdown(f"## {subtotal} é igual a {subporcento}% de {s}")
-    
+    with xy:
+        coluna, coluna1 = st.columns(2)
+        with coluna:
+            a = st.number_input("X", value = 0, key="k1")
+        with coluna1:
+            b = st.number_input("Y", value= 0, key="k2")
+        if st.button("Resposta", key="resposta1"):
+            st.markdown("Resposta")
+    with xy2:
+        coluna2, coluna3 = st.columns(2)
+        with coluna2:
+            c = st.number_input("X", value= 0, key="k3")
+        with coluna3:
+            d = st.number_input("Y", value= 0, key="k4")
+        if st.button("Resposta", key="resposta2"):
+            st.markdown("Resposta")
+    with xy3:
+        coluna4, coluna5 = st.columns(2)
+        with coluna4:
+            e = st.number_input("X", value= 0, key="k5")
+        with coluna5:
+            f = st.number_input("Y", value= 0, key="k6")
+        if st.button("Resposta", key="resposta3"):
+            st.markdown("Resposta")
+        
 
     
     #DEMONSTRAÇÃO DO CÓDIGO
