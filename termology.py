@@ -14,7 +14,11 @@ def termologia():
 
     k = st.number_input("Kelvin", value=0.0)
 
-    if c != 0:
+    if c and f and k == 0:
+        if st.button("Resposta"):
+            st.markdown("mec")
+
+    elif c != 0:
 
         # CELSIUS PARA:
 
