@@ -6,7 +6,7 @@ The program solve mathematic calculations and formulas like second grey equation
 ## Streamlit program URL
 https://lucabattesini-equacao-do-segundo-grau-main-40tfo9.streamlit.app/
 
-## technologys used
+## technologies used
 -Python
 
 -Streamlit
